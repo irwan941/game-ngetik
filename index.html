@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Game Ngetik</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-custom">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        ></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdownId"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Dropdown</a
+              >
+              <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item" href="#">Action 1</a>
+                <a class="dropdown-item" href="#">Action 2</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      style="background-image: linear-gradient(to right top, #ffffff, #f5ecfc, #f5d6f2, #f9bfe0, #ffa7c4);"
+      class="jumbotron jumbotron-fluid "
+    >
+      <div class="container text-center">
+        <img src="assets/game.png" class="rounded float-left" alt="awe" />
+        <h1 style="font-size: 2rem;font-weight: 300">PERMAINAN NGETIK</h1>
+        <p class="lead">
+          Ayo tes kecepatan mengetik anda dengan cara memainkan game ini
+        </p>
+        <!-- <hr class="my-2" /> -->
+        <p class="lead">
+          <a
+            style="background-color: #B4004E !important"
+            class="btn btn-lg mt-5"
+            href="#section2"
+            role="button"
+            ><i style="color:white" class="fas fa-arrow-circle-down"></i
+          ></a>
+        </p>
+      </div>
+    </div>
+
+    <div
+      id="section2"
+      style="background-image: linear-gradient(to right, #5a0027, #6f0031, #86003b, #9c0044, #b4004e);"
+      class="jumbotron jumbotron-fluid"
+    >
+      <div class="container text-center">
+        <h1 style="color:#DDD4D7;font-size: 2rem;font-weight: 300">
+          AYO MULAI PERMAINANYA
+        </h1>
+        <p style="color:#DDD4D7" class="lead">
+          Coba ketik kata acak di bawah ini dengan benar dengan waktu
+          <b class="detik">5</b> detik
+        </p>
+        <div
+          class="w-75 p-3 rounded"
+          style="position: relative;background-color: #EC407A; height: 300px; margin: auto"
+        >
+          <h1 id="currentkata" style="color:#F4E0E8">Hilang</h1>
+          <input
+            style="background-color: #B4004E;border: 2px solid #6D002F; color: white !important;max-width: 300px; margin: auto"
+            type="text"
+            class="form-control"
+            id="inputKata"
+            placeholder="Masukan Kata"
+          />
+          <h1 id="game-over" style="display:none" class="mt-1">
+            Game over !!!
+          </h1>
+          <div
+            style="position: absolute;
+            bottom: 0;
+            left: 0;"
+            class="waktu"
+          >
+            <p class="text-white">Sisa Waktu</p>
+            <div
+              class="m-2"
+              style="display:flex; width: 100px;height: 100px;background-color: #B4004E;-moz-border-radius: 100px / 100px;
+                -webkit-border-radius: 100x / 100px;
+                    border-radius:100px / 100px;"
+            >
+              <div
+                id="waktu"
+                style="margin: auto auto;font-size: 2rem;color: #fff"
+              >
+                5
+              </div>
+            </div>
+          </div>
+          <div
+            style="position: absolute;
+                    bottom: 0;
+                    right: 0;"
+            class="point"
+          >
+            <p class="text-white">Point Kamu</p>
+            <div
+              class="m-2"
+              style="display:flex; width: 100px;height: 100px;background-color: #B4004E;-moz-border-radius: 100px / 100px;
+                        -webkit-border-radius: 100x / 100px;
+                            border-radius:100px / 100px;"
+            >
+              <div
+                id="point"
+                style="margin: auto auto;font-size: 2rem;color: #fff"
+              >
+                0
+              </div>
+            </div>
+          </div>
+          <div
+            style="position: absolute;left:0;right:0;
+                    bottom: 0;margin-bottom: 10px"
+            class="button-restart"
+          >
+            <a
+              id="restart"
+              style="display: none ;background-color: #B4004E !important;color: #ddd4d7;cursor:pointer;"
+              class="btn btn-lg mt-5"
+              role="button"
+              >Restart <i style="color:#ddd4d7" class="fas fa-sync"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div style="margin: auto auto;color: white">
+        Copyright © 2018 irwanch.info
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
